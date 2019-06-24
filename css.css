@@ -1,0 +1,89 @@
+*,*::before,*::after{
+	box-sizing:border-box;
+}
+
+html{
+	font-size:100%;
+	font-family:"Oleo Script";
+	color:#57575d;
+}
+
+.row{
+	width:100%
+}
+
+
+.herocontainer{
+	width:100%;
+	height:60vh;
+	position:relative;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	overflow:hidden;
+	background:#d08e88;
+	animation: herocolors 10s infinite alternate linear;
+}
+
+@-webkit-keyframes herocolors {
+	0%{background:#d08e88}
+	25%{background:#8896d0}
+	50%{background:#88d0a1}
+	75%{background:#ddef7b}
+	100%{background:#d0ac88}
+}
+@keyframes herocolors {
+	0%{background:#d08e88}
+	25%{background:#8896d0}
+	50%{background:#88d0a1}
+	75%{background:#ddef7b}
+	100%{background:#d0ac88}
+}
+
+@keyframes jumbotronopacity{
+	
+}
+
+.hero{
+	width:120%;
+	margin:-5vh -10% 0 -10%;
+	height:70vh;
+	background:url(https://static.pexels.com/photos/9601/flight-clouds-airplane-view.jpg) center center no-repeat;
+	background-size:cover;
+	-webkit-filter:blur(4px);	filter:blur(4px);
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:0.8;
+}
+
+.jumbotron{
+	font-size:10vmin;
+	color:#312552;
+	text-align:center;
+	z-index:1;
+	padding:0 10%;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	opacity:.5;
+}
+
+@media screen and (min-width:481px) and (max-width:740px){
+	.herocontainer{
+		height:40vh;
+	}
+
+	.hero{
+		height:50vh;
+	}
+}
+
+@media screen and (min-width:240px) and (max-width:480px){
+	.herocontainer{
+		height:30vh;
+	}
+
+	.hero{
+		height:40vh;
+	}
+}
